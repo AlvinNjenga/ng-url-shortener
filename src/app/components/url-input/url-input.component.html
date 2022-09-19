@@ -1,0 +1,18 @@
+<div style="display: flex; flex-direction: column; justify-content: center">
+  <h1 class="title">Al's URL Shortener</h1>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>URL to shorten</mat-label>
+    <input matInput placeholder="https://" id="url" name="url" [(ngModel)]="url" />
+  </mat-form-field>
+  <div class="btn-wrapper">
+    <button
+      style="width: 40%"
+      (click)="onShorten()"
+      mat-raised-button
+      color="primary"
+    >
+      Shorten!
+    </button>
+  </div>
+  {{ url }}
+</div>
