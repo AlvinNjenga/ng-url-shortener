@@ -1,0 +1,28 @@
+<div style="display: flex; flex-direction: column; justify-content: center">
+  <h1 class="title">Shortened URL</h1>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label></mat-label>
+    <input
+      matInput
+      placeholder="https://"
+      id="url"
+      name="url"
+      value="{{ shortenedUrl }}"
+      readonly="true"
+    />
+  </mat-form-field>
+  <div style="display: flex; justify-content: center;">
+    <button (click)="onCopyToClipboard()" style="width: 140px; margin-right: 20px; background-color: #772953; color: white" mat-raised-button>
+      Copy to clipboard
+    </button>
+    <a routerLink="/" class="btn-link">
+      <button
+        style="width: 100%;"
+        mat-raised-button
+        color="primary"
+      >
+        Shorten another
+      </button>
+    </a>
+  </div>
+</div>

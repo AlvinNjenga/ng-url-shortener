@@ -1,0 +1,22 @@
+{
+  "shortenedUrls": [
+    {
+      "id": 1,
+      "url": "https://google.com",
+      "code": "ABCD",
+      "visits": 5
+    },
+    {
+      "url": "https://yahoo.com",
+      "code": "1",
+      "visits": 0,
+      "id": 2
+    },
+    {
+      "url": "https://reddit.com",
+      "code": "2",
+      "visits": 0,
+      "id": 3
+    }
+  ]
+}

@@ -1,18 +1,18 @@
-<div style="display: flex; flex-direction: column; justify-content: center">
+<form style="display: flex; flex-direction: column; justify-content: center" (ngSubmit)="onSubmit()">
   <h1 class="title">Al's URL Shortener</h1>
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>URL to shorten</mat-label>
-    <input matInput placeholder="https://" id="url" name="url" [(ngModel)]="url" />
+    <input matInput placeholder="https://" id="url" name="url" [(ngModel)]="url" [formControl]="urlInputControl" />
+    <mat-error *ngIf="urlInputControl.hasError('invalidUrl')" >Something is wrong. Ahhhh!</mat-error>
   </mat-form-field>
   <div class="btn-wrapper">
     <button
       style="width: 40%"
-      (click)="onShorten()"
       mat-raised-button
       color="primary"
+      type="submit"
     >
       Shorten!
     </button>
   </div>
-  {{ url }}
-</div>
+</form>
